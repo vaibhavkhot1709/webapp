@@ -37,10 +37,10 @@ public class EmpController {
 	}
 
 	@RequestMapping(value = "/updateEmp", method= RequestMethod.POST)
-	public String updateEmp(int id) {
+	public String updateEmp(Employee employee) {
 
-		empService.updateEmp(id);
-		return "updateemp";
+		empService.updateEmp(employee);
+		return "update";
 	}
 	
 	@RequestMapping(value = "/getEmp", method = RequestMethod.GET)

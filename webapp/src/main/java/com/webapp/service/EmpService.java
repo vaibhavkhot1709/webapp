@@ -8,8 +8,9 @@ public interface EmpService {
 
 	public void deleteEmployee(int id);
 
-	public void updateEmp(int id);
+	public void updateEmp(Employee employee);
 
 	public Employee getById(int id);
+
 		
 }

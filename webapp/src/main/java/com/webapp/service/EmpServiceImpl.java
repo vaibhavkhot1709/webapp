@@ -25,9 +25,9 @@ public class EmpServiceImpl implements EmpService {
 	}
 
 	@Override
-	public void updateEmp(int id) {
+	public void updateEmp(Employee employee) {
 
-		empDao.updateEmp(id);
+		empDao.updateEmp(employee);
 	}
 
 	@Override

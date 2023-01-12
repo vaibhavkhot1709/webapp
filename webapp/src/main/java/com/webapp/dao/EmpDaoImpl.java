@@ -36,13 +36,14 @@ public class EmpDaoImpl implements EmpDao {
 		tx.commit();
 	}
 
-	public void updateEmp(int id) {
+	public void updateEmp(Employee employee) {
+		
 		Session session = sessionFactory.openSession();
-		Transaction tx = session.beginTransaction();
-		Employee employee = session.get(Employee.class, id);
-
-//		session.update(employee);
-		session.update("name", Employee.class);
+		Transaction txn = session.beginTransaction();
+		Employee emp = session.get(Employee.class, employee.getId());
+		session.delete(emp);
+		session.save(employee);
+		txn.commit();
 	}
 
 	@Override
