@@ -23,6 +23,18 @@ public class EmpServiceImpl implements EmpService {
 		empDao.deleteEmployee(id);
 		
 	}
+
+	@Override
+	public void updateEmp(int id) {
+
+		empDao.updateEmp(id);
+	}
+
+	@Override
+	public Employee getById(int id) {
+		return empDao.getById(id);
+		
+	}
 	
 	
 }
